@@ -13,7 +13,7 @@ function App() {
 
   const handleSearch = (filters: { make: string; model: string; year: string }) => {
     setError(null);
-    axios.get('https://cors-anywhere.herokuapp.com/https://carapi.app/api/trims', {
+    axios.get('https://carapi.app/api/trims', {
       params: { ...filters, verbose: "yes" },
     },)
       .then(response => setCars(response.data))
