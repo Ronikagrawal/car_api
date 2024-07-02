@@ -1,0 +1,26 @@
+/* src/components/CarDetails.css */
+.car-details {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+  text-align: center;
+  padding: 20px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .car-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

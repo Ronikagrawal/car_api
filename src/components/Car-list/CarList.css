@@ -1,0 +1,32 @@
+/* src/components/CarList.css */
+.car-list {
+  list-style: none;
+  padding: 0;
+}
+
+.car-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.car-item a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.car-item a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+  }
+
+  .car-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+}
