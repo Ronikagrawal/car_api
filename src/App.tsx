@@ -1,4 +1,4 @@
-import {  useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import { Car } from './types/type';
@@ -19,7 +19,14 @@ function App() {
       .then(response => setCars(response.data))
       .catch(error => setError('Error fetching cars'));
   };
-  
+
+  useEffect(() => {
+    axios.post('https://carapi.app/api/auth/login', {
+      "api_token": "02bad011-1e6c-4703-8d58-a1eb42345587",
+      "api_secret": "d3c72251c909ea39895f72be7f22d37d"
+    })
+  }, [])
+
   return (
     <Router>
       <div className="app">
