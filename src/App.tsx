@@ -24,7 +24,7 @@ function App() {
     axios.post('https://carapi.app/api/auth/login', {
       "api_token": "02bad011-1e6c-4703-8d58-a1eb42345587",
       "api_secret": "d3c72251c909ea39895f72be7f22d37d"
-    })
+    }).catch((error) => console.log(error))
   }, [])
 
   return (
